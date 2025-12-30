@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(sp.constitution)",
+      "Skill(sp.specify)",
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''history\\\\prompts\\\\001-cli-todo-app''\")",
+      "Skill(sp.plan)",
+      "Bash(powershell -Command \".specify/scripts/powershell/setup-plan.ps1 -Json\")",
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''specs\\\\001-cli-todo-app\\\\contracts''\")",
+      "Bash(powershell -Command \".specify/scripts/powershell/update-agent-context.ps1 -AgentType claude\")",
+      "Skill(sp.tasks)",
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json\")",
+      "Skill(sp.implement)",
+      "Bash(powershell -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''specs\\\\001-cli-todo-app\\\\checklists'' -Filter ''*.md'' | Select-Object -ExpandProperty Name\")",
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''src/models'', ''src/services'', ''src/cli''\")"
+    ]
+  }
+}
